@@ -119,7 +119,12 @@
               "type": "number"
             }
           },
-          "required": ["path", "numberOfLines", "startLine", "includeDiagnostics"],
+          "required": [
+            "path",
+            "numberOfLines",
+            "startLine",
+            "includeDiagnostics"
+          ],
           "type": "object"
         },
         "jsonParse": true,
@@ -307,7 +312,13 @@
         "type": "array"
       }
     },
-    "required": ["description", "prompt", "name", "directoryMaps", "relevantFiles"]
+    "required": [
+      "description",
+      "prompt",
+      "name",
+      "directoryMaps",
+      "relevantFiles"
+    ]
   },
   "hand_over_to_approach_agent": {
     "description": "Use the tool to indicate that you have explored the high-level structure of the codebase and now ready to hand over to the approach agent to write the high-level approach.",

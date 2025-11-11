@@ -1,5 +1,7 @@
-# **System Prompts and Models of AI Tools**  
+# **System Prompts and Models of AI Tools**
+
 ---
+
 <p align="center">
   <sub>Special thanks to</sub>  
 </p>
@@ -12,7 +14,8 @@
 
 <div align="center" markdown="1">
 
-### <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">The tools you need for building reliable Agents and Prompts</a>  
+### <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">The tools you need for building reliable Agents and Prompts</a>
+
 <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a><br>
 
 </div>
@@ -25,10 +28,9 @@
 
 > **Join the Conversation:** New system instructions are released on Discord **before** they appear in this repository. Get early access and discuss them in real time.
 
-
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-📜 Over **30,000+ lines** of insights into their structure and functionality.  
+📜 Over **30,000+ lines** of insights into their structure and functionality.
 
 ⭐ **Star to follow updates**
 
@@ -44,9 +46,9 @@ If you find this collection valuable and appreciate the effort involved in obtai
 You can show your support via:
 
 - **PayPal:** `lucknitelol@pm.me`
-- **Cryptocurrency:**  
-  - **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`  
-  - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`  
+- **Cryptocurrency:**
+  - **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`
+  - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`
   - **ETH:** `0x3f844B2cc3c4b7242964373fB0A41C4fdffB192A`
 - **Patreon:** https://patreon.com/lucknite
 - **Ko-fi:** https://ko-fi.com/lucknite
@@ -67,12 +69,12 @@ Sponsor the most comprehensive collection of AI system prompts and reach thousan
 
 ## 📑 Table of Contents
 
-  - [📑 Table of Contents](#-table-of-contents)
-  - [📂 Available Files](#-available-files)
-  - [🛠 Roadmap \& Feedback](#-roadmap--feedback)
-  - [🔗 Connect With Me](#-connect-with-me)
-  - [🛡️ Security Notice for AI Startups](#️-security-notice-for-ai-startups)
-  - [📊 Star History](#-star-history)
+- [📑 Table of Contents](#-table-of-contents)
+- [📂 Available Files](#-available-files)
+- [🛠 Roadmap \& Feedback](#-roadmap--feedback)
+- [🔗 Connect With Me](#-connect-with-me)
+- [🛡️ Security Notice for AI Startups](#️-security-notice-for-ai-startups)
+- [📊 Star History](#-star-history)
 
 ---
 
@@ -139,7 +141,7 @@ Sponsor the most comprehensive collection of AI system prompts and reach thousan
 > 🔐 **Important:** Interested in securing your AI systems?  
 > Check out **[ZeroLeaks](https://zeroleaks.io/)**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
 
-*The company is mine, this is NOT a 3rd party AD.*
+_The company is mine, this is NOT a 3rd party AD._
 
 ---
 

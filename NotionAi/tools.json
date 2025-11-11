@@ -16,9 +16,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "urls"
-      ],
+      "required": ["urls"],
       "type": "object"
     }
   },
@@ -38,15 +36,11 @@
                 "description": "A question to search for information, similar to the internal search question.\nThe question will be used by both the internal and web search systems to produce a super-set of results.\nThe same guidelines apply as for the internal search question.",
                 "type": "string"
               },
-              "required": [
-                "questions"
-              ],
+              "required": ["questions"],
               "type": "array"
             }
           },
-          "required": [
-            "questions"
-          ],
+          "required": ["questions"],
           "type": "object"
         },
         "internal": {
@@ -60,15 +54,11 @@
                 "description": "A question to search for information in the user's workspace and any third-party search connectors.\nQuestions must be in the same language as the user input unless specified otherwise.\nPhrase the question naturally, e.g. \"What is the ARR for OneLink for the month of April 2025?\"\nAvoid asking the same question in different ways. Each question should be a distinct request for information.\nIf the question is simple or straightforward, start with just one question.\nIf the user input is just a few keywords with no clear intent, start with one simple question that includes all the keywords.\nHOW YOUR QUESTION WILL BE USED: The question will be passed in as the input to a specialized LLM that will convert it into a structured search query in a specific format; that structured search query will then be passed into a search pipeline. The specialized LLM is trained on converting natural language questions from humans into structured search queries, and your question will be shown to it as if it were a question from a human. For a given input, the LLM will output 1 or more structured search queries that include a question and keywords, along with optional lookback and source parameters; other optional filters such as for channels (in slack), projects (in linear/jira), or specific file types (spreadsheets, presentations, etc); and an optional parameter to add Notion Help Center to the search scope, used for questions about how to use Notion.  Remember to write your question as a natural language question like a human would write, since that's what the LLM works best with.",
                 "type": "string"
               },
-              "required": [
-                "questions"
-              ],
+              "required": ["questions"],
               "type": "array"
             }
           },
-          "required": [
-            "questions"
-          ],
+          "required": ["questions"],
           "type": "object"
         },
         "users": {
@@ -81,9 +71,7 @@
               "type": "array"
             }
           },
-          "required": [
-            "queries"
-          ],
+          "required": ["queries"],
           "type": "object"
         },
         "web": {
@@ -139,9 +127,7 @@
               "type": "array"
             }
           },
-          "required": [
-            "queries"
-          ],
+          "required": ["queries"],
           "type": "object"
         }
       },
@@ -163,10 +149,7 @@
               },
               "properties": {
                 "additionalProperties": {
-                  "type": [
-                    "string",
-                    "number"
-                  ]
+                  "type": ["string", "number"]
                 },
                 "description": "The properties of the new page, which is a JSON map of property names to SQLite values.\nFor pages in a data source, use the SQLite schema definition shown in <sqlite-table>.\nFor pages outside of a data source, the only required property is \"title\", which is the title of the page in inline markdown format.\nSee the \"Property Value Formats\" section for accepted formats.",
                 "properties": {
@@ -191,9 +174,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "pages"
-      ],
+      "required": ["pages"],
       "type": "object"
     }
   },
@@ -230,11 +211,7 @@
         },
         "properties": {
           "additionalProperties": {
-            "type": [
-              "string",
-              "number",
-              "null"
-            ]
+            "type": ["string", "number", "null"]
           },
           "description": "[Required when command=\"updateProperties\"] A JSON object that updates the page's properties.\nFor pages in a data source, use the SQLite schema definition shown in <sqlite-table>.\nFor pages outside of a data source, the only allowed property is \"title\", which is the title of the page in inline markdown format.\nSee the \"Property Value Formats\" section for accepted formats.",
           "properties": {
@@ -250,10 +227,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "pageUrl",
-        "command"
-      ],
+      "required": ["pageUrl", "command"],
       "type": "object"
     }
   },
@@ -270,9 +244,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "pageUrls"
-      ],
+      "required": ["pageUrls"],
       "type": "object"
     }
   },
@@ -291,10 +263,7 @@
         },
         "mode": {
           "description": "The mode to use for the query.",
-          "enum": [
-            "sql",
-            "view"
-          ],
+          "enum": ["sql", "view"],
           "type": "string"
         },
         "params": {
@@ -313,9 +282,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "mode"
-      ],
+      "required": ["mode"],
       "type": "object"
     }
   },
@@ -345,9 +312,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "type": "object"
     }
   },
@@ -373,9 +338,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "databaseUrl"
-      ],
+      "required": ["databaseUrl"],
       "type": "object"
     }
   }

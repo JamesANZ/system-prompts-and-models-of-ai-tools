@@ -194,7 +194,13 @@
         "properties": {
           "action": {
             "description": "Todo management action for complex, multi-step tasks:\n\n**Core actions:**\n• **set_tasks** - Create initial task breakdown (max 7 milestone-level tasks)\n• **move_to_task** - Complete current work and focus on next specific task\n• **add_task** - Add single task to existing list\n\n**Utility actions:**\n• **read_list** - View current todo list without changes\n• **mark_all_done** - Complete all tasks (project finished)\n\n**When to use:** Multi-step projects, complex implementations, tasks requiring 3+ steps. Skip for trivial or single-step tasks.",
-            "enum": ["add_task", "set_tasks", "mark_all_done", "move_to_task", "read_list"],
+            "enum": [
+              "add_task",
+              "set_tasks",
+              "mark_all_done",
+              "move_to_task",
+              "read_list"
+            ],
             "type": "string"
           },
           "moveToTask": {

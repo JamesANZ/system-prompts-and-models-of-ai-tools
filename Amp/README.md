@@ -14,7 +14,7 @@ The system prompt used by Amp is tuned to Sonnet 4.x and has other LLMs register
 
 ```json
 {
-    "amp.url": "https://ampcode.com/",
-    "amp.gpt5": true
+  "amp.url": "https://ampcode.com/",
+  "amp.gpt5": true
 }
 ```

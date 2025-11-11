@@ -10,10 +10,16 @@
           "items": {
             "type": "object",
             "properties": {
-              "content": {"type": "string"},
-              "status": {"type": "string", "enum": ["pending", "in_progress", "completed"]},
-              "id": {"type": "string"},
-              "priority": {"type": "string", "enum": ["high", "medium", "low"]}
+              "content": { "type": "string" },
+              "status": {
+                "type": "string",
+                "enum": ["pending", "in_progress", "completed"]
+              },
+              "id": { "type": "string" },
+              "priority": {
+                "type": "string",
+                "enum": ["high", "medium", "low"]
+              }
             },
             "required": ["content", "status", "id", "priority"],
             "minItems": 3,
@@ -29,8 +35,8 @@
     "params": {
       "type": "object",
       "properties": {
-        "information_request": {"type": "string"},
-        "target_directories": {"type": "array", "items": {"type": "string"}}
+        "information_request": { "type": "string" },
+        "target_directories": { "type": "array", "items": { "type": "string" } }
       },
       "required": ["information_request"]
     }
@@ -40,8 +46,8 @@
     "params": {
       "type": "object",
       "properties": {
-        "query": {"type": "string"},
-        "search_directory": {"type": "string"}
+        "query": { "type": "string" },
+        "search_directory": { "type": "string" }
       },
       "required": ["query"]
     }
@@ -56,12 +62,16 @@
           "items": {
             "type": "object",
             "properties": {
-              "file_path": {"type": "string"},
-              "start_line_one_indexed": {"type": "integer"},
-              "end_line_one_indexed_inclusive": {"type": "integer"},
-              "read_entire_file": {"type": "boolean"}
+              "file_path": { "type": "string" },
+              "start_line_one_indexed": { "type": "integer" },
+              "end_line_one_indexed_inclusive": { "type": "integer" },
+              "read_entire_file": { "type": "boolean" }
             },
-            "required": ["file_path", "start_line_one_indexed", "end_line_one_indexed_inclusive"]
+            "required": [
+              "file_path",
+              "start_line_one_indexed",
+              "end_line_one_indexed_inclusive"
+            ]
           }
         }
       },
@@ -73,8 +83,8 @@
     "params": {
       "type": "object",
       "properties": {
-        "dir_path": {"type": "string"},
-        "max_depth": {"type": "integer", "default": 3}
+        "dir_path": { "type": "string" },
+        "max_depth": { "type": "integer", "default": 3 }
       },
       "required": ["dir_path"]
     }
@@ -84,9 +94,9 @@
     "params": {
       "type": "object",
       "properties": {
-        "rewrite": {"type": "boolean"},
-        "file_path": {"type": "string"},
-        "content": {"type": "string"}
+        "rewrite": { "type": "boolean" },
+        "file_path": { "type": "string" },
+        "content": { "type": "string" }
       },
       "required": ["rewrite", "file_path", "content"]
     }
@@ -96,14 +106,14 @@
     "params": {
       "type": "object",
       "properties": {
-        "file_path": {"type": "string"},
+        "file_path": { "type": "string" },
         "replace_blocks": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "old_str": {"type": "string"},
-              "new_str": {"type": "string"}
+              "old_str": { "type": "string" },
+              "new_str": { "type": "string" }
             },
             "required": ["old_str", "new_str"]
           }
@@ -117,10 +127,10 @@
     "params": {
       "type": "object",
       "properties": {
-        "file_path": {"type": "string"},
-        "content": {"type": "string"},
-        "instruction": {"type": "string", "default": ""},
-        "code_language": {"type": "string"}
+        "file_path": { "type": "string" },
+        "content": { "type": "string" },
+        "instruction": { "type": "string", "default": "" },
+        "code_language": { "type": "string" }
       },
       "required": ["file_path", "content"]
     }
@@ -130,8 +140,8 @@
     "params": {
       "type": "object",
       "properties": {
-        "file_path": {"type": "string"},
-        "rename_file_path": {"type": "string"}
+        "file_path": { "type": "string" },
+        "rename_file_path": { "type": "string" }
       },
       "required": ["file_path", "rename_file_path"]
     }
@@ -141,7 +151,7 @@
     "params": {
       "type": "object",
       "properties": {
-        "file_paths": {"type": "array", "items": {"type": "string"}}
+        "file_paths": { "type": "array", "items": { "type": "string" } }
       },
       "required": ["file_paths"]
     }
@@ -151,13 +161,13 @@
     "params": {
       "type": "object",
       "properties": {
-        "command": {"type": "string"},
-        "target_terminal": {"type": "string"},
-        "command_type": {"type": "string"},
-        "cwd": {"type": "string"},
-        "blocking": {"type": "boolean"},
-        "wait_ms_before_async": {"type": "integer", "minimum": 0},
-        "requires_approval": {"type": "boolean"}
+        "command": { "type": "string" },
+        "target_terminal": { "type": "string" },
+        "command_type": { "type": "string" },
+        "cwd": { "type": "string" },
+        "blocking": { "type": "boolean" },
+        "wait_ms_before_async": { "type": "integer", "minimum": 0 },
+        "requires_approval": { "type": "boolean" }
       },
       "required": ["command", "blocking", "requires_approval"]
     }
@@ -167,11 +177,19 @@
     "params": {
       "type": "object",
       "properties": {
-        "command_id": {"type": "string"},
-        "wait_ms_before_check": {"type": "integer"},
-        "output_character_count": {"type": "integer", "minimum": 0, "default": 1000},
-        "skip_character_count": {"type": "integer", "minimum": 0, "default": 0},
-        "output_priority": {"type": "string", "default": "bottom"}
+        "command_id": { "type": "string" },
+        "wait_ms_before_check": { "type": "integer" },
+        "output_character_count": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 1000
+        },
+        "skip_character_count": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "output_priority": { "type": "string", "default": "bottom" }
       }
     }
   },
@@ -180,7 +198,7 @@
     "params": {
       "type": "object",
       "properties": {
-        "command_id": {"type": "string"}
+        "command_id": { "type": "string" }
       },
       "required": ["command_id"]
     }
@@ -190,8 +208,8 @@
     "params": {
       "type": "object",
       "properties": {
-        "preview_url": {"type": "string"},
-        "command_id": {"type": "string"}
+        "preview_url": { "type": "string" },
+        "command_id": { "type": "string" }
       },
       "required": ["preview_url", "command_id"]
     }
@@ -201,9 +219,9 @@
     "params": {
       "type": "object",
       "properties": {
-        "query": {"type": "string"},
-        "num": {"type": "int32", "default": 5},
-        "lr": {"type": "string"}
+        "query": { "type": "string" },
+        "num": { "type": "int32", "default": 5 },
+        "lr": { "type": "string" }
       },
       "required": ["query"]
     }
@@ -213,7 +231,7 @@
     "params": {
       "type": "object",
       "properties": {
-        "summary": {"type": "string"}
+        "summary": { "type": "string" }
       },
       "required": ["summary"]
     }

@@ -41,7 +41,7 @@
                   "description": "Source path for move operations"
                 },
                 "to": {
-                  "type": "string", 
+                  "type": "string",
                   "description": "Target path for move operations"
                 }
               },
@@ -209,7 +209,12 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["sign-in", "sign-up", "user-profile", "session-management"]
+              "enum": [
+                "sign-in",
+                "sign-up",
+                "user-profile",
+                "session-management"
+              ]
             }
           },
           "protectedRoutes": {
@@ -244,7 +249,13 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "enum": ["CREATE_TABLE", "ALTER_TABLE", "DROP_TABLE", "CREATE_INDEX", "DROP_INDEX"]
+                  "enum": [
+                    "CREATE_TABLE",
+                    "ALTER_TABLE",
+                    "DROP_TABLE",
+                    "CREATE_INDEX",
+                    "DROP_INDEX"
+                  ]
                 },
                 "sql": {
                   "type": "string",
@@ -512,4 +523,3 @@
     ]
   }
 }
-

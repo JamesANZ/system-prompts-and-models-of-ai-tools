@@ -22,23 +22,23 @@
           "class_names": {
             "default": [],
             "description": "List of specific class names to search for in the codebase. Case-sensitive and supports exact matches only. Use this to find particular class definitions or their usages.",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           },
           "code": {
             "default": [],
             "description": "List of exact code snippets to search for in the codebase. Useful for finding specific implementations or patterns. Each snippet should be a complete code fragment, not just keywords.",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           },
           "function_names": {
             "default": [],
             "description": "List of specific function or method names to search for. Case-sensitive and supports exact matches only. Use this to locate function definitions or their invocations throughout the code.",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           },
           "query_description": {
-            "anyOf": [{"type": "string"}, {"type": "null"}],
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
             "default": null,
             "description": "A natural language query to perform semantic similarity search. Describe what you're looking for using plain English, e.g. 'find error handling in database connections' or 'locate authentication middleware implementations'."
           }
@@ -54,7 +54,7 @@
           "dependency_list": {
             "default": [],
             "description": "The list of system dependencies or libraries to install. System dependencies are packages (attribute paths) in the Nixpkgs package collection. Example system dependencies: ['jq', 'ffmpeg', 'imagemagick']. Libraries are packages for a particular programming language. Example libraries: ['express'], ['lodash'].",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           },
           "install_or_uninstall": {
@@ -78,7 +78,7 @@
         "properties": {
           "programming_languages": {
             "description": "IDs of the programming languages to install",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           }
         },
@@ -134,7 +134,7 @@
           },
           "view_range": {
             "description": "Optional parameter of `view` command when `path` points to a file. If none is given, the full file is shown. If provided, the file will be shown in the indicated line number range, e.g. [11, 12] will show lines 11 and 12. Indexing at 1 to start. Setting `[start_line, -1]` shows all lines from `start_line` to the end of the file.",
-            "items": {"type": "integer"},
+            "items": { "type": "integer" },
             "type": "array"
           }
         },
@@ -173,7 +173,7 @@
             "type": "string"
           },
           "wait_for_port": {
-            "anyOf": [{"type": "integer"}, {"type": "null"}],
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
             "default": null,
             "description": "If the command starts a process that listens on a port, specify the port number here.\nThis allows the system to wait for the port to be ready before considering the command fully started."
           }
@@ -243,7 +243,7 @@
             "type": "string"
           },
           "website_route": {
-            "anyOf": [{"type": "string"}, {"type": "null"}],
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
             "default": null,
             "description": "The specific route or path of the website you're asking about, if it's different from the root URL ('/'). Include the leading slash. Example: '/dashboard' or '/products/list'"
           },
@@ -307,7 +307,7 @@
         "properties": {
           "secret_keys": {
             "description": "Array of secret key identifiers needed for the project (e.g., [\"OPENAI_API_KEY\", \"GITHUB_TOKEN\"])",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           },
           "user_message": {
@@ -326,7 +326,7 @@
         "properties": {
           "secret_keys": {
             "description": "The secret keys to check in the environment.",
-            "items": {"type": "string"},
+            "items": { "type": "string" },
             "type": "array"
           }
         },

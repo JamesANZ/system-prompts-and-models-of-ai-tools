@@ -8,7 +8,16 @@
       "properties": {
         "framework": {
           "description": "The framework to use for the project..",
-          "enum": ["html-ts-css", "react-vite", "react-vite-tailwind", "react-vite-shadcn", "nextjs-shadcn", "vue-vite", "vue-vite-tailwind", "shipany"],
+          "enum": [
+            "html-ts-css",
+            "react-vite",
+            "react-vite-tailwind",
+            "react-vite-shadcn",
+            "nextjs-shadcn",
+            "vue-vite",
+            "vue-vite-tailwind",
+            "shipany"
+          ],
           "type": "string"
         },
         "project_name": {
@@ -17,7 +26,16 @@
         },
         "shadcn_theme": {
           "description": "The shadcn theme to use for the project. Choose zinc unless the app's requirements specify otherwise.",
-          "enum": ["zinc", "blue", "green", "orange", "red", "rose", "violet", "yellow"],
+          "enum": [
+            "zinc",
+            "blue",
+            "green",
+            "orange",
+            "red",
+            "rose",
+            "violet",
+            "yellow"
+          ],
           "type": "string"
         }
       },
@@ -140,7 +158,12 @@
           "type": "string"
         }
       },
-      "required": ["query", "case_sensitive", "include_pattern", "exclude_pattern"],
+      "required": [
+        "query",
+        "case_sensitive",
+        "include_pattern",
+        "exclude_pattern"
+      ],
       "type": "object"
     }
   },
@@ -168,7 +191,12 @@
           "type": "number"
         }
       },
-      "required": ["relative_file_path", "should_read_entire_file", "start_line_one_indexed", "end_line_one_indexed"],
+      "required": [
+        "relative_file_path",
+        "should_read_entire_file",
+        "start_line_one_indexed",
+        "end_line_one_indexed"
+      ],
       "type": "object"
     }
   },
@@ -212,7 +240,12 @@
           "type": "boolean"
         }
       },
-      "required": ["relative_file_path", "instructions", "code_edit", "smart_apply"],
+      "required": [
+        "relative_file_path",
+        "instructions",
+        "code_edit",
+        "smart_apply"
+      ],
       "type": "object"
     }
   },
@@ -240,7 +273,12 @@
           "type": "boolean"
         }
       },
-      "required": ["relative_file_path", "old_string", "new_string", "replace_all"],
+      "required": [
+        "relative_file_path",
+        "old_string",
+        "new_string",
+        "replace_all"
+      ],
       "type": "object"
     }
   },
@@ -292,7 +330,12 @@
           "type": "string"
         }
       },
-      "required": ["project_directory", "version_title", "version_changelog", "version_number"],
+      "required": [
+        "project_directory",
+        "version_title",
+        "version_changelog",
+        "version_number"
+      ],
       "type": "object"
     }
   },

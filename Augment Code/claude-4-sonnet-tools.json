@@ -328,7 +328,12 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["NOT_STARTED", "IN_PROGRESS", "CANCELLED", "COMPLETE"],
+                  "enum": [
+                    "NOT_STARTED",
+                    "IN_PROGRESS",
+                    "CANCELLED",
+                    "COMPLETE"
+                  ],
                   "description": "New task state. Use NOT_STARTED for [ ], IN_PROGRESS for [/], CANCELLED for [-], COMPLETE for [x]."
                 },
                 "name": {
@@ -369,7 +374,12 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["NOT_STARTED", "IN_PROGRESS", "CANCELLED", "COMPLETE"],
+                  "enum": [
+                    "NOT_STARTED",
+                    "IN_PROGRESS",
+                    "CANCELLED",
+                    "COMPLETE"
+                  ],
                   "description": "Initial state of the task. Defaults to NOT_STARTED."
                 },
                 "parent_task_id": {

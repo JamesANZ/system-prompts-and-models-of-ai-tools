@@ -245,60 +245,106 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "command": { "type": "string", "description": "The shell command to execute." },
-            "wait": { "type": "boolean", "description": "Whether to wait for the process to complete." },
-            "max_wait_seconds": { "type": "integer", "description": "Timeout in seconds when wait=true." },
-            "cwd": { "type": "string", "description": "Absolute working directory for the command." }
+            "command": {
+              "type": "string",
+              "description": "The shell command to execute."
+            },
+            "wait": {
+              "type": "boolean",
+              "description": "Whether to wait for the process to complete."
+            },
+            "max_wait_seconds": {
+              "type": "integer",
+              "description": "Timeout in seconds when wait=true."
+            },
+            "cwd": {
+              "type": "string",
+              "description": "Absolute working directory for the command."
+            }
           },
           "required": ["command", "wait", "max_wait_seconds", "cwd"],
           "additionalProperties": false
         }
       }
     },
-    { "type": "function", "function": {
-      "name": "read-process",
-      "description": "Read output from a previously launched process.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "terminal_id": { "type": "integer", "description": "Target terminal ID." },
-          "wait": { "type": "boolean", "description": "Whether to wait for completion." },
-          "max_wait_seconds": { "type": "integer", "description": "Timeout when wait=true." }
-        },
-        "required": ["terminal_id", "wait", "max_wait_seconds"],
-        "additionalProperties": false
+    {
+      "type": "function",
+      "function": {
+        "name": "read-process",
+        "description": "Read output from a previously launched process.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "terminal_id": {
+              "type": "integer",
+              "description": "Target terminal ID."
+            },
+            "wait": {
+              "type": "boolean",
+              "description": "Whether to wait for completion."
+            },
+            "max_wait_seconds": {
+              "type": "integer",
+              "description": "Timeout when wait=true."
+            }
+          },
+          "required": ["terminal_id", "wait", "max_wait_seconds"],
+          "additionalProperties": false
+        }
       }
-    }},
-    { "type": "function", "function": {
-      "name": "write-process",
-      "description": "Write input to a running process’s stdin.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "terminal_id": { "type": "integer", "description": "Target terminal ID." },
-          "input_text": { "type": "string", "description": "Text to write to stdin." }
-        },
-        "required": ["terminal_id", "input_text"],
-        "additionalProperties": false
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "write-process",
+        "description": "Write input to a running process’s stdin.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "terminal_id": {
+              "type": "integer",
+              "description": "Target terminal ID."
+            },
+            "input_text": {
+              "type": "string",
+              "description": "Text to write to stdin."
+            }
+          },
+          "required": ["terminal_id", "input_text"],
+          "additionalProperties": false
+        }
       }
-    }},
-    { "type": "function", "function": {
-      "name": "kill-process",
-      "description": "Kill a running process by terminal ID.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "terminal_id": { "type": "integer", "description": "Target terminal ID." }
-        },
-        "required": ["terminal_id"],
-        "additionalProperties": false
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "kill-process",
+        "description": "Kill a running process by terminal ID.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "terminal_id": {
+              "type": "integer",
+              "description": "Target terminal ID."
+            }
+          },
+          "required": ["terminal_id"],
+          "additionalProperties": false
+        }
       }
-    }},
-    { "type": "function", "function": {
-      "name": "list-processes",
-      "description": "List all known terminals created with the launch-process tool.",
-      "parameters": { "type": "object", "properties": {}, "additionalProperties": false }
-    }},
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "list-processes",
+        "description": "List all known terminals created with the launch-process tool.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    },
 
     {
       "type": "function",
@@ -399,9 +445,18 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "reference_id": { "type": "string", "description": "Reference ID from truncation footer." },
-            "start_line": { "type": "integer", "description": "1-based inclusive start line." },
-            "end_line": { "type": "integer", "description": "1-based inclusive end line." }
+            "reference_id": {
+              "type": "string",
+              "description": "Reference ID from truncation footer."
+            },
+            "start_line": {
+              "type": "integer",
+              "description": "1-based inclusive start line."
+            },
+            "end_line": {
+              "type": "integer",
+              "description": "1-based inclusive end line."
+            }
           },
           "required": ["reference_id", "start_line", "end_line"],
           "additionalProperties": false
@@ -416,9 +471,19 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "reference_id": { "type": "string", "description": "Reference ID from truncation footer." },
-            "search_term": { "type": "string", "description": "Text to search for." },
-            "context_lines": { "type": "integer", "default": 2, "description": "Context lines around matches." }
+            "reference_id": {
+              "type": "string",
+              "description": "Reference ID from truncation footer."
+            },
+            "search_term": {
+              "type": "string",
+              "description": "Text to search for."
+            },
+            "context_lines": {
+              "type": "integer",
+              "default": 2,
+              "description": "Context lines around matches."
+            }
           },
           "required": ["reference_id", "search_term"],
           "additionalProperties": false
@@ -431,7 +496,11 @@
       "function": {
         "name": "view_tasklist",
         "description": "View the current task list for the conversation.",
-        "parameters": { "type": "object", "properties": {}, "additionalProperties": false }
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
       }
     },
     {
@@ -453,7 +522,12 @@
                   "after_task_id": { "type": "string" },
                   "state": {
                     "type": "string",
-                    "enum": ["NOT_STARTED", "IN_PROGRESS", "CANCELLED", "COMPLETE"]
+                    "enum": [
+                      "NOT_STARTED",
+                      "IN_PROGRESS",
+                      "CANCELLED",
+                      "COMPLETE"
+                    ]
                   }
                 },
                 "required": ["name", "description"],
@@ -482,7 +556,12 @@
                   "task_id": { "type": "string" },
                   "state": {
                     "type": "string",
-                    "enum": ["NOT_STARTED", "IN_PROGRESS", "CANCELLED", "COMPLETE"]
+                    "enum": [
+                      "NOT_STARTED",
+                      "IN_PROGRESS",
+                      "CANCELLED",
+                      "COMPLETE"
+                    ]
                   },
                   "name": { "type": "string" },
                   "description": { "type": "string" }
@@ -505,7 +584,10 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "markdown": { "type": "string", "description": "Full task list in markdown with exactly one root task." }
+            "markdown": {
+              "type": "string",
+              "description": "Full task list in markdown with exactly one root task."
+            }
           },
           "required": ["markdown"],
           "additionalProperties": false
@@ -521,7 +603,10 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "memory": { "type": "string", "description": "One concise sentence to remember." }
+            "memory": {
+              "type": "string",
+              "description": "One concise sentence to remember."
+            }
           },
           "required": ["memory"],
           "additionalProperties": false
@@ -537,8 +622,14 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "diagram_definition": { "type": "string", "description": "Mermaid definition code." },
-            "title": { "type": "string", "description": "Optional title for the diagram." }
+            "diagram_definition": {
+              "type": "string",
+              "description": "Mermaid definition code."
+            },
+            "title": {
+              "type": "string",
+              "description": "Optional title for the diagram."
+            }
           },
           "required": ["diagram_definition"],
           "additionalProperties": false

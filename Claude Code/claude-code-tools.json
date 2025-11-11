@@ -19,11 +19,7 @@
             "description": "The type of specialized agent to use for this task"
           }
         },
-        "required": [
-          "description",
-          "prompt",
-          "subagent_type"
-        ],
+        "required": ["description", "prompt", "subagent_type"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -51,9 +47,7 @@
             "description": "Set to true to run this command in the background. Use BashOutput to read the output later."
           }
         },
-        "required": [
-          "command"
-        ],
+        "required": ["command"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -73,9 +67,7 @@
             "description": "The directory to search in. If not specified, the current working directory will be used. IMPORTANT: Omit this field to use the default directory. DO NOT enter \"undefined\" or \"null\" - simply omit it for the default behavior. Must be a valid directory path if provided."
           }
         },
-        "required": [
-          "pattern"
-        ],
+        "required": ["pattern"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -100,11 +92,7 @@
           },
           "output_mode": {
             "type": "string",
-            "enum": [
-              "content",
-              "files_with_matches",
-              "count"
-            ],
+            "enum": ["content", "files_with_matches", "count"],
             "description": "Output mode: \"content\" shows matching lines (supports -A/-B/-C context, -n line numbers, head_limit), \"files_with_matches\" shows file paths (supports head_limit), \"count\" shows match counts (supports head_limit). Defaults to \"files_with_matches\"."
           },
           "-B": {
@@ -140,9 +128,7 @@
             "description": "Enable multiline mode where . matches newlines and patterns can span lines (rg -U --multiline-dotall). Default: false."
           }
         },
-        "required": [
-          "pattern"
-        ],
+        "required": ["pattern"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -165,9 +151,7 @@
             "description": "List of glob patterns to ignore"
           }
         },
-        "required": [
-          "path"
-        ],
+        "required": ["path"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -183,9 +167,7 @@
             "description": "The plan you came up with, that you want to run by the user for approval. Supports markdown. The plan should be pretty concise."
           }
         },
-        "required": [
-          "plan"
-        ],
+        "required": ["plan"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -209,9 +191,7 @@
             "description": "The number of lines to read. Only provide if the file is too large to read at once."
           }
         },
-        "required": [
-          "file_path"
-        ],
+        "required": ["file_path"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -240,11 +220,7 @@
             "description": "Replace all occurences of old_string (default false)"
           }
         },
-        "required": [
-          "file_path",
-          "old_string",
-          "new_string"
-        ],
+        "required": ["file_path", "old_string", "new_string"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -278,20 +254,14 @@
                   "description": "Replace all occurences of old_string (default false)."
                 }
               },
-              "required": [
-                "old_string",
-                "new_string"
-              ],
+              "required": ["old_string", "new_string"],
               "additionalProperties": false
             },
             "minItems": 1,
             "description": "Array of edit operations to perform sequentially on the file"
           }
         },
-        "required": [
-          "file_path",
-          "edits"
-        ],
+        "required": ["file_path", "edits"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -311,10 +281,7 @@
             "description": "The content to write to the file"
           }
         },
-        "required": [
-          "file_path",
-          "content"
-        ],
+        "required": ["file_path", "content"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -339,26 +306,16 @@
           },
           "cell_type": {
             "type": "string",
-            "enum": [
-              "code",
-              "markdown"
-            ],
+            "enum": ["code", "markdown"],
             "description": "The type of the cell (code or markdown). If not specified, it defaults to the current cell type. If using edit_mode=insert, this is required."
           },
           "edit_mode": {
             "type": "string",
-            "enum": [
-              "replace",
-              "insert",
-              "delete"
-            ],
+            "enum": ["replace", "insert", "delete"],
             "description": "The type of edit to make (replace, insert, delete). Defaults to replace."
           }
         },
-        "required": [
-          "notebook_path",
-          "new_source"
-        ],
+        "required": ["notebook_path", "new_source"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -379,10 +336,7 @@
             "description": "The prompt to run on the fetched content"
           }
         },
-        "required": [
-          "url",
-          "prompt"
-        ],
+        "required": ["url", "prompt"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -404,29 +358,19 @@
                 },
                 "status": {
                   "type": "string",
-                  "enum": [
-                    "pending",
-                    "in_progress",
-                    "completed"
-                  ]
+                  "enum": ["pending", "in_progress", "completed"]
                 },
                 "id": {
                   "type": "string"
                 }
               },
-              "required": [
-                "content",
-                "status",
-                "id"
-              ],
+              "required": ["content", "status", "id"],
               "additionalProperties": false
             },
             "description": "The updated todo list"
           }
         },
-        "required": [
-          "todos"
-        ],
+        "required": ["todos"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -457,9 +401,7 @@
             "description": "Never include search results from these domains"
           }
         },
-        "required": [
-          "query"
-        ],
+        "required": ["query"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -479,9 +421,7 @@
             "description": "Optional regular expression to filter the output lines. Only lines matching this regex will be included in the result. Any lines that do not match will no longer be available to read."
           }
         },
-        "required": [
-          "bash_id"
-        ],
+        "required": ["bash_id"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }
@@ -497,9 +437,7 @@
             "description": "The ID of the background shell to kill"
           }
         },
-        "required": [
-          "shell_id"
-        ],
+        "required": ["shell_id"],
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#"
       }

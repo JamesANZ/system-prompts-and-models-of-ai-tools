@@ -13,8 +13,8 @@
           },
           "attachments": {
             "anyOf": [
-              {"type": "string"},
-              {"items": {"type": "string"}, "type": "array"}
+              { "type": "string" },
+              { "items": { "type": "string" }, "type": "array" }
             ],
             "description": "(Optional) List of attachments to show to user, can be file paths or URLs"
           }
@@ -37,8 +37,8 @@
           },
           "attachments": {
             "anyOf": [
-              {"type": "string"},
-              {"items": {"type": "string"}, "type": "array"}
+              { "type": "string" },
+              { "items": { "type": "string" }, "type": "array" }
             ],
             "description": "(Optional) List of question-related files or reference materials"
           },
@@ -537,7 +537,14 @@
           },
           "date_range": {
             "type": "string",
-            "enum": ["all", "past_hour", "past_day", "past_week", "past_month", "past_year"],
+            "enum": [
+              "all",
+              "past_hour",
+              "past_day",
+              "past_week",
+              "past_month",
+              "past_year"
+            ],
             "description": "(Optional) Time range filter for search results."
           }
         },
