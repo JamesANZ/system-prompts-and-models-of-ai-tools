@@ -34,6 +34,8 @@ npm install
 npm run build
 ```
 
+> `npm install` automatically registers this server with Claude Desktop (if present) by updating `~/Library/Application Support/Claude/claude_desktop_config.json`. You can opt out by removing the `postinstall` script from `package.json`.
+
 Start the server on stdio (suitable for Claude Desktop, Cursor MCP, etc.):
 
 ```bash
